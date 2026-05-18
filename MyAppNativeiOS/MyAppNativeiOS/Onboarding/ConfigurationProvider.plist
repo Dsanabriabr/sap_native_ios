@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>auth</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>oauth2.authorizationEndpoint</key>
+				<string>https://deb5181ftrial-dev-qwerty.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/authorize</string>
+				<key>oauth2.clients</key>
+				<array>
+					<dict>
+						<key>clientID</key>
+						<string>d174ee1f-7d7e-4a63-8285-78da334d9bea</string>
+						<key>grantType</key>
+						<string>authorization_code</string>
+						<key>redirectURL</key>
+						<string>https://deb5181ftrial-dev-qwerty.cfapps.us10-001.hana.ondemand.com</string>
+					</dict>
+				</array>
+				<key>oauth2.pkce</key>
+				<dict>
+					<key>codeChallengeMethod</key>
+					<string>S256</string>
+				</dict>
+				<key>oauth2.tokenEndpoint</key>
+				<string>https://deb5181ftrial-dev-qwerty.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/token</string>
+			</dict>
+			<key>type</key>
+			<string>oauth2</string>
+		</dict>
+	</array>
+	<key>host</key>
+	<string>deb5181ftrial-dev-qwerty.cfapps.us10-001.hana.ondemand.com</string>
+	<key>port</key>
+	<integer>443</integer>
+	<key>protocol</key>
+	<string>https</string>
+</dict>
+</plist>
