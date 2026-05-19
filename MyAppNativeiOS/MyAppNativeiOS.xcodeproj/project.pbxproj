@@ -69,6 +69,16 @@
 		D2D1868FEF6A678D5011C232 /* SharedFmwk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF6D18913AFF4CBE052D78CF /* SharedFmwk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D708683AF76F88D18EA8DC89 /* SalesOrderHeader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FBC3125DF32CAAF61AB504 /* SalesOrderHeader.storyboard */; };
 		D835F4139555D1EEDF5B8A0E /* ConfigurationProvider.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB1CE2B42F3EEBD5F5507FA5 /* ConfigurationProvider.plist */; };
+		E087EFCB2FBC98770062D98B /* CATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E087EFCA2FBC986B0062D98B /* CATests.swift */; };
+		E087EFF42FBCBF5E0062D98B /* MyAppMDKDataFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F081D8F0CE9EA5A9DC159B1 /* MyAppMDKDataFmwk.framework */; };
+		E087EFF52FBCBF5E0062D98B /* MyAppMDKDataFmwk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F081D8F0CE9EA5A9DC159B1 /* MyAppMDKDataFmwk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E087EFF62FBCBF7B0062D98B /* MyAppMDKDataFmwk.framework in Resources */ = {isa = PBXBuildFile; fileRef = 8F081D8F0CE9EA5A9DC159B1 /* MyAppMDKDataFmwk.framework */; };
+		E087EFF72FBCBFFF0062D98B /* SAPFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2DA8883408C18888061BC9 /* SAPFoundation.xcframework */; };
+		E087EFF82FBCBFFF0062D98B /* SAPFoundation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2DA8883408C18888061BC9 /* SAPFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E087EFF92FBCC05B0062D98B /* SAPCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2859085F8E1E86A22AF1944D /* SAPCommon.xcframework */; };
+		E087EFFA2FBCC05B0062D98B /* SAPCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2859085F8E1E86A22AF1944D /* SAPCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E087EFFB2FBCC06C0062D98B /* SAPOData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8364F2D9BECB998A6455BE8A /* SAPOData.xcframework */; };
+		E087EFFC2FBCC06C0062D98B /* SAPOData.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8364F2D9BECB998A6455BE8A /* SAPOData.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E799FE41EE04C4E971F31EE3 /* SAPFiori.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9A6216376D9CF64163973D /* SAPFiori.xcframework */; };
 		ECC18C303BAF17C6804DFF04 /* SupplierMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D58C0D0FBFE53D505531868 /* SupplierMasterViewController.swift */; };
 		EEC51169E7EA57F352AC33E4 /* PurchaseOrderItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828ACBC8B9A7A2C5462D58DF /* PurchaseOrderItem.storyboard */; };
@@ -107,6 +117,20 @@
 				44DB6680F01E02E330DD2E05 /* SAPOfflineOData.xcframework in Embed Frameworks */,
 				669216891EAEFDC965758BC2 /* MyAppMDKDataFmwk.framework in Embed Frameworks */,
 				D2D1868FEF6A678D5011C232 /* SharedFmwk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E087EFF32FBCBF0B0062D98B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E087EFFC2FBCC06C0062D98B /* SAPOData.xcframework in Embed Frameworks */,
+				E087EFF52FBCBF5E0062D98B /* MyAppMDKDataFmwk.framework in Embed Frameworks */,
+				E087EFFA2FBCC05B0062D98B /* SAPCommon.xcframework in Embed Frameworks */,
+				E087EFF82FBCBFFF0062D98B /* SAPFoundation.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +202,7 @@
 		D755C3DC0527150F2B3220CD /* ApplicationUIManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApplicationUIManager.swift; path = Onboarding/ApplicationUIManager.swift; sourceTree = "<group>"; };
 		DC2FA4CB9A7138677BB4F4E1 /* ODataOnboardingStep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ODataOnboardingStep.swift; path = OData/ODataOnboardingStep.swift; sourceTree = "<group>"; };
 		DF5EE98CA34C4E6DA89DE47C /* SalesOrderItemMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SalesOrderItemMasterViewController.swift; path = ViewControllers/MyAppMDKData/SalesOrderItem/SalesOrderItemMasterViewController.swift; sourceTree = "<group>"; };
+		E087EFCA2FBC986B0062D98B /* CATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATests.swift; sourceTree = "<group>"; };
 		EF7C5C77A846E287996B001B /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PurchaseOrderItem.storyboard; sourceTree = "<group>"; };
 		F4A757B1E0B850DB9073E8A7 /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PurchaseOrderHeader.storyboard; sourceTree = "<group>"; };
 		F71567D9C992D084AC6EFD29 /* Base */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SalesOrderItem.storyboard; sourceTree = "<group>"; };
@@ -186,8 +211,24 @@
 		FF9DEC8F5873BC061434F2EC /* ProductMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductMasterViewController.swift; path = ViewControllers/MyAppMDKData/Product/ProductMasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E087EFE12FBCB6770062D98B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Domain/Entities/Customer.swift,
+				Domain/Repositories/CustomerRepository.swift,
+				Domain/UseCases/CreateCustomer.swift,
+				Domain/UseCases/DeleteCustomer.swift,
+				Domain/UseCases/GetCustomer.swift,
+				Domain/UseCases/GetCustomers.swift,
+				Domain/UseCases/UpdateCustomer.swift,
+			);
+			target = 7A5744B221DE553600E58C7F /* UITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E087EFC12FBC8C4F0062D98B /* App_CA */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App_CA; sourceTree = "<group>"; };
+		E087EFC12FBC8C4F0062D98B /* App_CA */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E087EFE12FBCB6770062D98B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = App_CA; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +251,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E087EFFB2FBCC06C0062D98B /* SAPOData.xcframework in Frameworks */,
+				E087EFF42FBCBF5E0062D98B /* MyAppMDKDataFmwk.framework in Frameworks */,
+				E087EFF92FBCC05B0062D98B /* SAPCommon.xcframework in Frameworks */,
+				E087EFF72FBCBFFF0062D98B /* SAPFoundation.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +399,7 @@
 		7A5744B421DE553600E58C7F /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				E087EFCA2FBC986B0062D98B /* CATests.swift */,
 				7A5744B521DE553600E58C7F /* UITests.swift */,
 				7A5744B721DE553700E58C7F /* Info.plist */,
 			);
@@ -493,6 +539,7 @@
 				7A5744AF21DE553600E58C7F /* Sources */,
 				7A5744B021DE553600E58C7F /* Frameworks */,
 				7A5744B121DE553600E58C7F /* Resources */,
+				E087EFF32FBCBF0B0062D98B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -577,6 +624,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E087EFF62FBCBF7B0062D98B /* MyAppMDKDataFmwk.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5744B621DE553600E58C7F /* UITests.swift in Sources */,
+				E087EFCB2FBC98770062D98B /* CATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,6 +1032,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LSP4LMWCP5;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = UITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -1010,6 +1060,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LSP4LMWCP5;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = UITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
