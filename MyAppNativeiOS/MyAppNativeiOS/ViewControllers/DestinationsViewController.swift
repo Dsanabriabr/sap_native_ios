@@ -10,6 +10,7 @@ import SAPFioriFlows
 import SAPFoundation
 import SharedFmwk
 import UIKit
+import SwiftUI
 
 class DestinationsViewController: FUIFormTableViewController {
     let destinations = FileConfigurationProvider("AppParameters").provideConfiguration().configuration["Destinations"] as! NSDictionary
@@ -20,6 +21,7 @@ class DestinationsViewController: FUIFormTableViewController {
         super.viewDidLoad()
 
         configureMenuItems()
+        configureCAFlowItem()
     }
 
     private func configureMenuItems() {
@@ -50,6 +52,24 @@ class DestinationsViewController: FUIFormTableViewController {
         ])
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), menu: barButtonMenu)
+    }
+    
+    // MARK: - New Btn to clean arch flow
+    
+    private func configureCAFlowItem(){
+        
+        func goSwiftUIFlow(action _: UIAction)  {
+            let swiftUIView = MainCA()
+            let hostingController = UIHostingController(rootView: swiftUIView)
+                    
+            navigationController?.pushViewController(hostingController, animated: true)
+        }
+        
+        let barButtonMenu = UIMenu(title: "", options: .displayInline, children: [
+            UIAction(title: NSLocalizedString("Go SwiftUI C.A. Flow", comment: ""), image: UIImage(systemName: "line.diagonal.trianglehead.up.right"), handler: goSwiftUIFlow),
+        ])
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "star.circle"), menu: barButtonMenu)
     }
 
     // MARK: - Table view data source
