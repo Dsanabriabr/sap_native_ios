@@ -63,4 +63,15 @@ final class CustomerTests: XCTestCase {
 
         XCTAssertEqual(repo.customers.first?.firstName, "Daniel")
     }
+    
+    func testDeleteCustomer() async throws {
+        let repo = CustomerRepositoryMock()
+        repo.customers = [
+            Customer(id: "1", firstName: "Daniel", lastName: "Sanabria", email: nil, phone: nil, address: nil)
+        ]
+        let useCase = DeleteCustomerUseCase(repository: repo)
+        try await useCase.execute(id: "1")
+
+        XCTAssertEqual(repo.customers.isEmpty, true)
+    }
 }
