@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -186,6 +186,10 @@
 		FF9DEC8F5873BC061434F2EC /* ProductMasterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductMasterViewController.swift; path = ViewControllers/MyAppMDKData/Product/ProductMasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E087EFC12FBC8C4F0062D98B /* App_CA */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App_CA; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		7A1315B21D4B982000A5DA56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -312,6 +316,7 @@
 		7A1315B71D4B982000A5DA56 /* MyAppNativeiOS */ = {
 			isa = PBXGroup;
 			children = (
+				E087EFC12FBC8C4F0062D98B /* App_CA */,
 				9137606C255ABF5C0059ABE7 /* MyAppNativeiOS.entitlements */,
 				CBCA7A9B1E3778A9001AF49E /* Main.storyboard */,
 				7A1315C11D4B982000A5DA56 /* Assets.xcassets */,
@@ -472,6 +477,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E087EFC12FBC8C4F0062D98B /* App_CA */,
 			);
 			name = MyAppNativeiOS;
 			productName = MyAppNativeiOS;
