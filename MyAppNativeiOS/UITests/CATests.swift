@@ -47,4 +47,20 @@ final class CustomerTests: XCTestCase {
 
         XCTAssertEqual(result?.firstName, "Daniel")
     }
+    
+    func testCreateCustomer() async throws {
+        let repo = CustomerRepositoryMock()
+        let useCase = CreateCustomerUseCase(repository: repo)
+        let customer = Customer(
+                id: "1",
+                firstName: "Daniel",
+                lastName: "Sanabria",
+                email: nil,
+                phone: nil,
+                address: nil
+            )
+            try await useCase.execute(customer: customer)
+
+        XCTAssertEqual(repo.customers.first?.firstName, "Daniel")
+    }
 }
