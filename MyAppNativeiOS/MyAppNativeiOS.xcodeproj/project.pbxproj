@@ -222,6 +222,10 @@
 				Domain/UseCases/GetCustomer.swift,
 				Domain/UseCases/GetCustomers.swift,
 				Domain/UseCases/UpdateCustomer.swift,
+				Presentation/ViewModels/CreateCustomerViewModel.swift,
+				Presentation/ViewModels/CustomerListViewModel.swift,
+				Presentation/Views/CreateCustomerView.swift,
+				Presentation/Views/CustomerListView.swift,
 			);
 			target = 7A5744B221DE553600E58C7F /* UITests */;
 		};
