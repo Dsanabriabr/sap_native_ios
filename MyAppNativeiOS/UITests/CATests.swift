@@ -93,4 +93,19 @@ final class CustomerTests: XCTestCase {
 
         XCTAssertEqual(customer.fullName, "Daniel Soliz")
     }
+    
+    @MainActor
+    func testModel_Load_CustomerList() async throws {
+        let repo = CustomerRepositoryMock()
+        repo.customers = [
+            Customer(id: "1", firstName: "Daniel", lastName: "Sanabria", email: nil, phone: nil, address: nil)
+        ]
+
+        let useCase = GetCustomersUseCase(repository: repo)
+        let vm = CustomerListViewModel(getCustomers: useCase)
+
+        await vm.load()
+
+        XCTAssertEqual(vm.customers.count, 1)
+    }
 }
