@@ -152,4 +152,25 @@ final class CustomerTests: XCTestCase {
 
         XCTAssertEqual(repo.customers.first?.firstName, "Daniel")
     }
+    
+    @MainActor
+    func testModel_Delete_CreateCustomer() async throws {
+
+        let repo = CustomerRepositoryMock()
+        repo.customers = [
+            Customer(id: "1", firstName: "Daniel", lastName: "Sanabria")
+        ]
+
+        let vm = CreateCustomerViewModel(
+            getCustomer: GetCustomerUseCase(repository: repo),
+            createCustomer: CreateCustomerUseCase(repository: repo),
+            updateCustomer: UpdateCustomerUseCase(repository: repo),
+            deleteCustomer: DeleteCustomerUseCase(repository: repo),
+            id: "1"
+        )
+
+        try await vm.delete()
+
+        XCTAssertEqual(repo.customers.count, 0)
+    }
 }
