@@ -31,7 +31,7 @@ class CreateCustomerViewModel: ObservableObject {
         self.updateCustomer = updateCustomer
         self.deleteCustomer = deleteCustomer
         self.id = id
-        self.customer = Customer(id: "", firstName: "", lastName: "")
+        self.customer = Customer(id: UUID().uuidString, firstName: "", lastName: "")
     }
 
     func load() async {
