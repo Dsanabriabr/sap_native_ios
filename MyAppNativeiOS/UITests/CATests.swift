@@ -74,4 +74,23 @@ final class CustomerTests: XCTestCase {
 
         XCTAssertEqual(repo.customers.isEmpty, true)
     }
+    
+    func testUpdateCustomer() async throws {
+        let repo = CustomerRepositoryMock()
+        repo.customers = [
+            Customer(id: "1", firstName: "Daniel", lastName: "Sanabria", email: nil, phone: nil, address: nil)
+        ]
+        let useCase = UpdateCustomerUseCase(repository: repo)
+        let customer = Customer(
+                id: "1",
+                firstName: "Daniel",
+                lastName: "Soliz",
+                email: nil,
+                phone: nil,
+                address: nil
+            )
+        try await useCase.execute(customer: customer)
+
+        XCTAssertEqual(customer.fullName, "Daniel Soliz")
+    }
 }
