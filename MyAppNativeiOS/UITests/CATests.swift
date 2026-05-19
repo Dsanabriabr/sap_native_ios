@@ -108,4 +108,25 @@ final class CustomerTests: XCTestCase {
 
         XCTAssertEqual(vm.customers.count, 1)
     }
+    
+    @MainActor
+    func testModel_Save_CreateCustomer() async throws {
+        let repo = CustomerRepositoryMock()
+        let create = CreateCustomerUseCase(repository: repo)
+        let update = UpdateCustomerUseCase(repository: repo)
+        let delete = DeleteCustomerUseCase(repository: repo)
+        let get = GetCustomerUseCase(repository: repo)
+
+        let vm = CreateCustomerViewModel(
+            getCustomer: get,
+            createCustomer: create,
+            updateCustomer: update,
+            deleteCustomer: delete,
+            id: nil
+        )
+
+        vm.customer = Customer(id: "1", firstName: "Daniel", lastName: "Sanabria")
+        try await vm.save()
+        XCTAssertEqual(repo.customers.count, 1)
+    }
 }
