@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct MainCA: View {
+    @StateObject var app = AppContainer()
     var body: some View {
-        Text("This is the Main Clean Architecture View")
+        app.makeCustomerListView()
+            .environmentObject(app)
     }
 }
