@@ -9,7 +9,6 @@
 import SwiftUI
 
 @MainActor
-
 class CustomerListViewModel: ObservableObject {
 
     @Published var customers: [Customer] = []
