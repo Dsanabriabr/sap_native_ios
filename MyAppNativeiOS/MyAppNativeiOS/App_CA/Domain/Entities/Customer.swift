@@ -25,3 +25,9 @@ struct Customer: Equatable, Identifiable {
     var phone: String?
     var address: Address?
 }
+
+extension Customer {
+    var fullName: String {
+        "\(firstName) \(lastName)"
+    }
+}
