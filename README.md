@@ -1,5 +1,9 @@
 # SAP BTP SDK for iOS + Reused MDK OData (ESPM) Study
 
+<a href="https://www.sap.com/products/try-sap/trials-downloads.html?search=sdk%20for%20ios">
+  SAP BTP SDK Assistant for iOS v. 26.4.0
+</a>
+
 | Sing in |
 |--------|
 | <img src="Images/SAP_iOS_Singin.png" width="200"> |
