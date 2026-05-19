@@ -28,17 +28,6 @@ class CellCreationHelper {
     
     static func objectCellWithSwiftContent(tableView: UITableView, indexPath: IndexPath, key: String, value: String) -> FUIObjectTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FUIObjectTableViewCell.reuseIdentifier, for: indexPath as IndexPath) as! FUIObjectTableViewCell
-        
-//        cell.contentConfiguration =  UIHostingConfiguration {
-//            HStack {
-//                Image(systemName: "star")
-//                VStack(alignment: .leading, spacing: 4) {
-//                    Text(value).font(.title2)
-//                    Text(key).font(.subheadline)
-//                }.padding()
-//                Spacer()
-//            }.padding(.vertical, 12).frame(maxWidth: .infinity, alignment: .leading)
-//        }
         cell.headlineText = value
         cell.subheadlineText = key
         cell.accessoryType = .disclosureIndicator
