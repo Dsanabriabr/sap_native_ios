@@ -7,27 +7,32 @@
 //
 
 import SwiftUI
+import MyAppMDKDataFmwk
 
 @MainActor
 class AppContainer: ObservableObject {
 
-    let repository: CustomerRepository
+    let customerRepository: CustomerRepository
 
     init() {
-        self.repository = CustomerRepositoryMock()
+        guard let dataService = SAPServiceProvider.makeDataService() else {
+                fatalError("SAP DataService not available")
+            }
+        let sapCustomerService = SAPCustomerService(dataService: dataService)
+        self.customerRepository = CustomerRepositoryData(service: sapCustomerService)
     }
 
     func makeCustomerListView() -> some View {
-        let useCase = GetCustomersUseCase(repository: repository)
+        let useCase = GetCustomersUseCase(repository: customerRepository)
         let vm = CustomerListViewModel(getCustomers: useCase)
         return CustomerListView(viewModel: vm)
     }
     
     func makeCreateCustomerView(customerId: String?) -> some View {
-        let get = GetCustomerUseCase(repository: repository)
-        let delete = DeleteCustomerUseCase(repository: repository)
-        let create = CreateCustomerUseCase(repository: repository)
-        let update = UpdateCustomerUseCase(repository: repository)
+        let get = GetCustomerUseCase(repository: customerRepository)
+        let delete = DeleteCustomerUseCase(repository: customerRepository)
+        let create = CreateCustomerUseCase(repository: customerRepository)
+        let update = UpdateCustomerUseCase(repository: customerRepository)
         let vm = CreateCustomerViewModel(getCustomer: get,
                                          createCustomer: create,
                                          updateCustomer: update,
