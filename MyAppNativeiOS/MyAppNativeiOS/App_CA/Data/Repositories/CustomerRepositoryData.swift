@@ -18,14 +18,14 @@ final class CustomerRepositoryData: CustomerRepository {
     }
 
     func fetchAll() async throws -> [Customer] {
-        let sapCustomers = try await service.fetchCustomers()
+        let sapCustomers = try await service.fetchEntityList()
         return sapCustomers.map {
             CustomerMapper.toDomain($0)
         }
     }
 
     func fetchById(_ id: String) async throws -> Customer? {
-        let sap = try await service.fetchCustomer(id: id)
+        let sap = try await service.fetchEntity(id: id)
         return sap.map { CustomerMapper.toDomain($0) }
     }
 
