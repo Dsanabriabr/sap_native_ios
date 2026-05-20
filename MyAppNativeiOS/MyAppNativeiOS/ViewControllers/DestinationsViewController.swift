@@ -61,7 +61,8 @@ class DestinationsViewController: FUIFormTableViewController {
         func goSwiftUIFlow(action _: UIAction)  {
             let swiftUIView = MainCA()
             let hostingController = UIHostingController(rootView: swiftUIView)
-                    
+            hostingController.title = "SwiftUI"
+            hostingController.navigationItem.largeTitleDisplayMode = .never
             navigationController?.pushViewController(hostingController, animated: true)
         }
         
